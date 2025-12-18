@@ -3,8 +3,6 @@ on:
     branches:
       - main
 
-
-
 jobs: 
   My-Deploy-Job: 
     runs-on: ubuntu-latest
@@ -17,4 +15,9 @@ jobs:
         run: |
           echo "Good"
           echo "Morning"
-      -
+          
+      - name: 작업 폴더가 무엇인지 출력
+        run:  pwd
+        
+      - name: 작업 폴더 목록 확인
+        run:  ls -la
